@@ -6,7 +6,7 @@
 /*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 18:44:53 by seongjuncho       #+#    #+#             */
-/*   Updated: 2022/02/12 17:42:41 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/03/25 22:17:46 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_puthexlow_fd(long long ln, int fd);
+void	ft_puthexup_fd(long long ln, int fd);
+void	ft_putpoint_fd(long long ln, int fd);
 
 #endif

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 18:13:43 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 22:13:35 by seongjch         ###   ########.fr       */
+/*   Created: 2022/02/08 20:31:49 by seongjuncho       #+#    #+#             */
+/*   Updated: 2022/02/09 16:25:29 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdio.h>
+#include "libft.h"
 
-int main()
+void	ft_putnbr_fd(int n, int fd)
 {
-	int top = 8;
-	ft_printf("%p\n", &top);
-	printf("%p", &top);
-	//printf("---%x-%p--",&top, &top);
+	long	ln;	
+
+	ln = n;
+	if (ln < 0)
+	{
+		ln *= -1;
+		ft_putchar_fd('-', fd);
+	}
+	if (ln > 9)
+		ft_putnbr_fd(ln / 10, fd);
+	ft_putchar_fd(ln % 10 + '0', fd);
 }

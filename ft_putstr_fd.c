@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 18:13:43 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 22:13:35 by seongjch         ###   ########.fr       */
+/*   Created: 2022/02/09 04:09:50 by seongjuncho       #+#    #+#             */
+/*   Updated: 2022/02/10 03:29:45 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include <stdio.h>
+#include "libft.h"
 
-int main()
+void	ft_putstr_fd(char *s, int fd)
 {
-	int top = 8;
-	ft_printf("%p\n", &top);
-	printf("%p", &top);
-	//printf("---%x-%p--",&top, &top);
+	if (s)
+		write(fd, s, ft_strlen(s));
 }
