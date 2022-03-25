@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 15:27:15 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 18:27:16 by seongjch         ###   ########.fr       */
+/*   Created: 2022/02/09 04:06:16 by seongjuncho       #+#    #+#             */
+/*   Updated: 2022/02/09 04:23:58 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-
-#include <stdarg.h>
 #include "libft.h"
 
-int	ft_printf(const char *format, ...);
-
-#endif
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

@@ -6,11 +6,13 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 14:58:57 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 16:22:06 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/03/25 19:24:59 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+static int type_checker(char type, va_list *valuse);
 
 int ft_printf(const char *format, ...)
 {
@@ -20,22 +22,34 @@ int ft_printf(const char *format, ...)
 
 	i = 0;
 	str = "";
-	ft_strlcat(str, format, ft_strlen(format));
 	va_start(values, format);
-	while (!str[i])
+	while (format[i])
 	{
-		if (str[i] == '%')
+		if (format[i] == '%')
 		{
-			i++;
+			type_checker(format[++i], &values);
 		}
 		else 
-			write(1, &str[i], 1);
+			write(0, &format[i], 1);
 		i++;
 	}
-	return (0);
+	return (ft_strlen(format));
 }
 
-int main()
+static int type_checker(char type, va_list *values)
 {
-	ft_printf("yap");
+	if (type == 'c')
+		ft_putchar_fd(va_arg(*values, int), 0);
+	/*else if (type == 's')
+	else if (type == 'p')
+	else if (type == 'd')
+	else if (type == 'i')
+	else if (type == 'u')
+	else if (type == 'x')
+	else if (type == 'X')
+	else if (type == '%')
+	else
+		return (-1)
+		*/
+	return (0);
 }

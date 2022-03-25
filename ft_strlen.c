@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: seongjch <seongjch@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 15:27:15 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 18:27:16 by seongjch         ###   ########.fr       */
+/*   Created: 2021/12/21 08:41:44 by seongjch          #+#    #+#             */
+/*   Updated: 2022/02/11 19:39:36 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-
-#include <stdarg.h>
 #include "libft.h"
 
-int	ft_printf(const char *format, ...);
+size_t	ft_strlen(const char *s)
+{
+	size_t	count;
 
-#endif
+	count = 0;
+	while (s[count])
+	{
+		count++;
+	}
+	return (count);
+}

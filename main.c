@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 15:27:15 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/25 18:27:16 by seongjch         ###   ########.fr       */
+/*   Created: 2022/03/25 18:13:43 by seongjch          #+#    #+#             */
+/*   Updated: 2022/03/25 19:18:26 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include <stdarg.h>
-#include "libft.h"
-
-int	ft_printf(const char *format, ...);
-
-#endif
+int main()
+{
+	ft_printf("yap%caa", 'k');
+}
