@@ -6,7 +6,7 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:51:24 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/30 17:19:57 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:38:59 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_puthexup_fd(unsigned int ln, int fd)
 {
-	int cnt;
+	int	cnt;
 
 	cnt = 0;
 	if (ln > 2147483647)

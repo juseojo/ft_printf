@@ -6,7 +6,7 @@
 /*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 20:31:49 by seongjuncho       #+#    #+#             */
-/*   Updated: 2022/03/30 16:33:22 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:39:13 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_putnbr_fd(long long n, int fd)
 {
 	long long	ln;	
-	int	cnt;
+	int			cnt;
 
 	cnt = 0;
 	ln = n;
