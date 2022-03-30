@@ -6,13 +6,13 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:51:24 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/30 15:53:35 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/03/30 17:19:57 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_puthexup_fd(long long ln, int fd)
+int	ft_puthexup_fd(unsigned int ln, int fd)
 {
 	int cnt;
 
