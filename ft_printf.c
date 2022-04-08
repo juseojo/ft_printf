@@ -6,7 +6,7 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 14:58:57 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/30 16:39:36 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/04/09 00:58:28 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ int	ft_printf(const char *format, ...)
 {
 	int		i;
 	int		count;
-	char	*str;
 	va_list	values;
 
 	i = 0;
-	str = "";
 	count = 0;
 	va_start(values, format);
 	while (format[i])
@@ -34,7 +32,8 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			write(1, &format[i], 1);
+			if (write(1, &format[i], 1) == -1)
+				return (-1);
 			count++;
 		}
 		i++;
@@ -45,10 +44,7 @@ int	ft_printf(const char *format, ...)
 static int	type_checker(char type, va_list *values_p)
 {
 	if (type == 'c')
-	{
-		ft_putchar_fd(va_arg(*values_p, int), 1);
-		return (1);
-	}
+		return (ft_putchar_fd(va_arg(*values_p, int), 1));
 	else if (type == 's')
 		return (ft_putstr_fd(va_arg(*values_p, char *), 1));
 	else if (type == 'd' || type == 'i')
@@ -63,17 +59,19 @@ static int	type_checker(char type, va_list *values_p)
 static int	type_checker_2(char type, va_list values)
 {
 	if (type == 'x')
-		return (ft_puthexlow_fd(va_arg(values, long long), 1));
+		return (ft_puthexlow_fd(va_arg(values, unsigned int), 1));
 	else if (type == 'X')
-		return (ft_puthexup_fd(va_arg(values, long long), 1));
+		return (ft_puthexup_fd(va_arg(values, unsigned int), 1));
 	else if (type == 'p')
 	{
-		write(1, "0x", 2);
-		return (ft_putpoint_fd(va_arg(values, long long), 1) + 2);
+		if (write(1, "0x", 2) == -1)
+			return (-1);
+		return (ft_putpoint_fd(va_arg(values, unsigned int), 1) + 2);
 	}
 	else if (type == '%')
 	{
-		write(1, "%", 1);
+		if (write(1, "%", 1) == -1)
+			return (-1);
 		return (1);
 	}
 	return (0);

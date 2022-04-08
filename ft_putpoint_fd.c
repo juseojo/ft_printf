@@ -6,13 +6,13 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:51:24 by seongjch          #+#    #+#             */
-/*   Updated: 2022/03/30 17:39:29 by seongjch         ###   ########.fr       */
+/*   Updated: 2022/04/09 01:06:37 by seongjuncho      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putpoint_fd(unsigned long ln, int fd)
+int	ft_putpoint_fd(unsigned int ln, int fd)
 {
 	int	cnt;
 
@@ -23,9 +23,15 @@ int	ft_putpoint_fd(unsigned long ln, int fd)
 		ln %= 0x10;
 	}
 	if (ln < 10)
-		ft_putchar_fd(ln + '0', fd);
+	{
+		if (ft_putchar_fd(ln + '0', fd) == -1)
+			return (-1);
+	}
 	else
-		ft_putchar_fd((ln % 10) + 'a', fd);
+	{
+		if (ft_putchar_fd((ln % 10) + 'a', fd) == -1)
+			return (-1);
+	}
 	cnt++;
 	return (cnt);
 }
