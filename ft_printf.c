@@ -6,7 +6,7 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 14:58:57 by seongjch          #+#    #+#             */
-/*   Updated: 2022/04/09 00:58:28 by seongjuncho      ###   ########.fr       */
+/*   Updated: 2022/04/09 18:30:18 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	type_checker_2(char type, va_list values)
 	{
 		if (write(1, "0x", 2) == -1)
 			return (-1);
-		return (ft_putpoint_fd(va_arg(values, unsigned int), 1) + 2);
+		return (ft_putpoint_fd(va_arg(values, unsigned long long), 1) + 2);
 	}
 	else if (type == '%')
 	{
