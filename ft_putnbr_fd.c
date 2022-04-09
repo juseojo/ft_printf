@@ -6,11 +6,11 @@
 /*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 20:31:49 by seongjuncho       #+#    #+#             */
-/*   Updated: 2022/04/09 01:05:24 by seongjuncho      ###   ########.fr       */
+/*   Updated: 2022/04/09 18:16:38 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_fd(long long n, int fd)
 {

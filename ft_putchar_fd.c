@@ -6,11 +6,11 @@
 /*   By: seongjuncho <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 04:06:16 by seongjuncho       #+#    #+#             */
-/*   Updated: 2022/04/09 00:59:29 by seongjuncho      ###   ########.fr       */
+/*   Updated: 2022/04/09 18:15:21 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar_fd(char c, int fd)
 {

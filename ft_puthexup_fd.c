@@ -6,11 +6,11 @@
 /*   By: seongjch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 19:51:24 by seongjch          #+#    #+#             */
-/*   Updated: 2022/04/09 01:04:51 by seongjuncho      ###   ########.fr       */
+/*   Updated: 2022/04/09 18:16:24 by seongjch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_puthexup_fd(unsigned int ln, int fd)
 {
